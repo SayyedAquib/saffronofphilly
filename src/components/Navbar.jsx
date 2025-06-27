@@ -17,7 +17,6 @@ export default function Navbar() {
     <>
       <nav className="w-full bg-white shadow-lg border-b border-orange-100 px-4 md:px-6 py-4 relative z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Mobile menu button */}
           <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -26,7 +25,6 @@ export default function Navbar() {
             {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
 
-          {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -46,7 +44,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl md:text-3xl font-bold text-orange-600 tracking-tight">
               Saffron
@@ -54,7 +51,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right side buttons */}
           <div className="flex items-center gap-3">
             <div className="hidden lg:flex items-center gap-4 text-xs text-gray-600 mr-4">
               <div className="flex items-center gap-1">
@@ -76,7 +72,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         <div
           className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 transition-all duration-300 ${
             menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -115,7 +110,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Overlay for mobile menu */}
       {menuOpen && (
         <div
           className="md:hidden fixed inset-0 bg-black bg-opacity-25 z-40"

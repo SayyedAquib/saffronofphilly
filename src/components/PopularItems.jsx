@@ -27,20 +27,24 @@ const dishes = [
 
 export default function PopularItems() {
   return (
-    <section className="py-12 bg-gray-50 text-center">
-      <h2 className="text-3xl font-semibold mb-6">
+    <section className="py-14 bg-white text-center">
+      <h2 className="text-4xl font-semibold text-black">
         See our most popular items
       </h2>
-      <div className="flex flex-wrap justify-center gap-6 px-4 md:px-12">
+      <p className="text-sm text-gray-600 mt-2">
+        Here’s a sneak peek of the items our customers can’t stop talking about
+      </p>
+
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 max-w-5xl mx-auto">
         {dishes.map((dish, index) => (
           <div
             key={index}
-            className="w-48 h-48 rounded-lg overflow-hidden shadow hover:scale-105 transition"
+            className="rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform duration-300"
           >
             <img
               src={dish.img}
               alt={dish.name}
-              className="w-48 h-48 object-cover"
+              className="w-full h-60 object-cover"
             />
           </div>
         ))}
